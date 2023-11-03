@@ -9,7 +9,21 @@ body {
     background-color: #2A2E2F;
     margin: 0;
     color: white;
-    overflow-y: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #2B344C;
+    border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #5E666A;
+    border-radius: 8px;
+    border: 3px solid #2B344C;
 }
 
 .container-header {
@@ -34,6 +48,16 @@ body {
     margin-right: auto;
     flex-direction: column;
     align-items: center;
+}
+
+.nomeLogo {
+    display: flex;
+    align-items: center;
+}
+
+.chatImg {
+    width: 30px;
+    margin-left: 16px;
 }
 
 .hr-header {
@@ -63,7 +87,7 @@ body {
     padding-top: 24px;
 }
 
-img {
+.userImg {
     height: 55px;
     width: 55px;
     border-radius: 50%;
@@ -94,12 +118,8 @@ img {
     color: #797979;
     margin-left: 350px;
     height: 100vh;
-    position: absolute;;
-}
-.vertical-line3 {
-    border-left: 2px solid;
-    color: #797979;
-    height: 82px;
+    top: 0px;
+    position: fixed;
 }
 
 
@@ -124,7 +144,7 @@ img {
 }
 
 .status-color {
-    background-color: #10A760;
+    background-color: #10A760; /*#F30000  <- Se Offline*/
     height: 12px;
     width: 12px;
     border-radius: 50%;
@@ -175,14 +195,14 @@ button:hover {
 }
 
 .body-messages {
-    height: 100vh;
+    /* height: 100vh; */
     width: 70%;
     /* background-color: #10A760; */
     position: absolute;
-    margin-top: 1310px;
+    top: 182px;
     display: flex;
     flex-direction: column;
-    overflow-y: visible;
+    padding-bottom: 88px;
 }
 
 .recived-messages {
@@ -216,6 +236,7 @@ button:hover {
     padding: 16px;
     padding-left: 24px;
     position: relative;
+    margin-top: 8px;
 }
 
 .message-sended {
@@ -225,6 +246,7 @@ button:hover {
     padding: 16px;
     padding-right: 24px;
     position: relative;
+    margin-top: 8px;
 }
 
 .salience {
